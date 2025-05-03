@@ -1,4 +1,5 @@
-`index.html`
+Извините за путаницу! Это было просто обозначение для файла. Вот исправленный код без лишних комментариев. Вы можете просто скопировать его и сохранить в файл с именем `index.html`.
+
 ```html
 <!DOCTYPE html>
 <html lang="ru">
@@ -48,12 +49,8 @@
       }
 
       @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
 
       .header {
@@ -94,9 +91,7 @@
         color: #444;
       }
 
-      input[type="text"],
-      select,
-      textarea {
+      input[type="text"], select, textarea {
         width: 100%;
         padding: 14px;
         border: 1px solid #ddd;
@@ -105,9 +100,7 @@
         transition: all 0.3s ease;
       }
 
-      input[type="text"]:focus,
-      select:focus,
-      textarea:focus {
+      input[type="text"]:focus, select:focus, textarea:focus {
         border-color: #0088cc;
         outline: none;
         box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.2);
@@ -156,230 +149,4 @@
       .modal-content {
         background-color: #000;
         color: #ff0000;
-        margin: 15% auto;
-        padding: 40px 30px;
-        border: 2px solid #ff0000;
-        width: 80%;
-        max-width: 500px;
-        text-align: center;
-      }
-
-      .close-button {
-        color: #ffffff;
-        background-color: #d90000;
-        border: none;
-        padding: 12px 30px;
-        margin-top: 20px;
-        cursor: pointer;
-      }
-
-      .close-button:hover {
-        background-color: #ff0000;
-      }
-
-      /* Чат с ИИ */
-      .chat-container {
-        margin-top: 20px;
-        background-color: #f1f1f1;
-        border-radius: 6px;
-        padding: 15px;
-        max-height: 300px;
-        overflow-y: auto;
-      }
-
-      .chat-message {
-        margin: 10px 0;
-      }
-
-      .chat-input {
-        display: flex;
-        margin-top: 10px;
-      }
-
-      .chat-input input {
-        flex: 1;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        margin-right: 10px;
-      }
-
-      .chat-input button {
-        padding: 10px 15px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-      }
-
-      .chat-input button:hover {
-        background-color: #0056b3;
-      }
-
-      .support-section {
-        margin-top: 20px;
-        text-align: center;
-      }
-
-      .support-btn {
-        background: linear-gradient(to right, #007bff, #0056b3);
-        color: white;
-        border: none;
-        padding: 16px 25px;
-        font-size: 16px;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: all 0.3s;
-      }
-
-      .support-btn:hover {
-        background: linear-gradient(to right, #0056b3, #004494);
-      }
-    </style>
-</head>
-<body>
-    <div class="background-animation" id="background-animation"></div>
-
-    <div class="container">
-        <div class="header">
-            <h1>Официальная система жалоб Telegram</h1>
-            <p>Централизованная система для обработки нарушений правил сообщества</p>
-        </div>
-
-        <div class="content">
-            <div class="form-group">
-                <label for="username">Имя пользователя</label>
-                <input type="text" id="username" placeholder="Введите имя пользователя без @" required />
-            </div>
-
-            <div class="form-group">
-                <label>Выберите основания для жалобы</label>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="violation" value="spam" /> Спам и массовые рассылки</label>
-                    <label><input type="checkbox" name="violation" value="threat" /> Угрозы и запугивание</label>
-                    <label><input type="checkbox" name="violation" value="personal" /> Распространение личных данных</label>
-                    <label><input type="checkbox" name="violation" value="fake" /> Поддельный аккаунт</label>
-                    <label><input type="checkbox" name="violation" value="scam" /> Мошенничество</label>
-                    <label><input type="checkbox" name="violation" value="illegal" /> Незаконный контент</label>
-                    <label><input type="checkbox" name="violation" value="harmful" /> Вредоносное ПО</label>
-                    <label><input type="checkbox" name="violation" value="violence" /> Пропаганда насилия</label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="count">Количество жалоб для отправки</label>
-                <select id="count">
-                    <option value="10">10 жалоб (Стандартное рассмотрение)</option>
-                    <option value="50">50 жалоб (Приоритетное рассмотрение)</option>
-                    <option value="100" selected>100 жалоб (Быстрое рассмотрение)</option>
-                    <option value="500">500 жалоб (Турбо режим)</option>
-                    <option value="1000">1000 жалоб (Гарантированное удаление)</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="details">Опишите нарушение</label>
-                <textarea id="details" rows="4" placeholder="Предоставьте детали нарушения для более эффективного рассмотрения..."></textarea>
-            </div>
-
-            <button class="submit-btn" onclick="showNotification()">Отправить жалобы</button>
-
-            <div id="notification" class="notification">
-                Жалобы успешно отправлены. Аккаунт будет рассмотрен модераторами в ближайшее время.
-            </div>
-
-            <div class="support-section">
-                <button class="support-btn" onclick="openSupportModal()">Связаться с поддержкой</button>
-            </div>
-
-            <!-- Чат с ИИ -->
-            <div class="chat-container" id="chatContainer">
-                <div class="chat-message" id="chatMessages"></div>
-            </div>
-            <div class="chat-input">
-                <input type="text" id="chatInput" placeholder="Введите ваше сообщение..." />
-                <button onclick="sendMessage()">Отправить</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="deathModal" class="modal">
-        <div class="modal-content">
-            <p>ЕГО СМЕРТЬ УЖЕ БЛИЗКО</p>
-            <button class="close-button" onclick="closeModal()">ПОНЯТНО</button>
-        </div>
-    </div>
-
-    <div id="supportModal" class="modal">
-        <div class="modal-content">
-            <p>Как мы можем помочь вам?</p>
-            <button class="close-button" onclick="closeSupportModal()">Закрыть</button>
-        </div>
-    </div>
-
-    <script>
-      // Генерация случайного имени для ИИ
-      const aiNames = ["Алиса", "Ботан", "Сириус", "Элли", "Котик"];
-      const aiName = aiNames[Math.floor(Math.random() * aiNames.length)];
-
-      function showNotification() {
-        const username = document.getElementById("username").value;
-        if (!username) {
-          alert("Пожалуйста, введите имя пользователя!");
-          return;
-        }
-
-        const violations = document.querySelectorAll('input[name="violation"]:checked');
-        if (violations.length === 0) {
-          alert("Выберите хотя бы один тип нарушения!");
-          return;
-        }
-
-        document.getElementById("deathModal").style.display = "block";
-        document.getElementById("notification").style.display = "block";
-      }
-
-      function closeModal() {
-        document.getElementById("deathModal").style.display = "none";
-      }
-
-      function openSupportModal() {
-        document.getElementById("supportModal").style.display = "block";
-      }
-
-      function closeSupportModal() {
-        document.getElementById("supportModal").style.display = "none";
-      }
-
-      function sendMessage() {
-        const input = document.getElementById("chatInput");
-        const message = input.value.trim();
-        if (message) {
-          // Отображение сообщения пользователя
-          const chatMessages = document.getElementById("chatMessages");
-          chatMessages.innerHTML += `<div class="chat-message">Вы: ${message}</div>`;
-          input.value = "";
-
-          // Ответ ИИ (разнообразные ответы)
-          const responses = [
-            `${aiName}: Спасибо за ваше сообщение! Мы свяжемся с вами.`,
-            `${aiName}: Ваше сообщение получено, ожидайте ответа.`,
-            `${aiName}: Мы ценим ваше обращение!`,
-            `${aiName}: Как мы можем помочь вам?`,
-            `${aiName}: Ваш вопрос важен для нас!`,
-          ];
-          const response = responses[Math.floor(Math.random() * responses.length)];
-
-          setTimeout(() => {
-            chatMessages.innerHTML += `<div class="chat-message">${response}</div>`;
-            chatMessages.scrollTop = chatMessages.scrollHeight; // Прокрутка вниз
-          }, 1000);
-        }
-      }
-    </script>
-  </body>
-</html>
-
-```
-
+        margin: 15
